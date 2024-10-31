@@ -1,0 +1,20 @@
+<!-- templates/add_entry.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Entry</title>
+</head>
+<body bgcolor="yellow">
+    <h1>Add New Entry</h1>
+    <form action="/add" method="post">
+        <label>Title:</label><br>
+        <input type="text" name="title"><br>
+        <label>Content:</label><br>
+        <textarea name="content"></textarea><br>
+        <button type="submit">Add Entry</button>
+    </form>
+    <a href="/">Back to Journal Entries</a>
+</body>
+</html>

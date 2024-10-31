@@ -1,0 +1,23 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entries</title>
+</head>
+<body bgcolor="yellow">
+    <h1>Journal Entries</h1>
+    <a href="/add">Add New Entry</a>
+    <ul>
+        {% for entry in entries %}
+        <li>
+            <h2>{{ entry[1] }}</h2>
+            <p>{{ entry[2] }}</p>
+            <small>{{ entry[3] }}</small><br>
+            <a href="/edit/{{ entry[0] }}">Edit</a> | <a href="/delete/{{ entry[0] }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

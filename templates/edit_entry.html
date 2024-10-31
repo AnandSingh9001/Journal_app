@@ -1,0 +1,20 @@
+<!-- templates/edit_entry.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Entry</title>
+</head>
+<body bgcolor="yellow">
+    <h1>Edit Entry</h1>
+    <form action="/edit/{{ entry[0] }}" method="post">
+        <label>Title:</label><br>
+        <input type="text" name="title" value="{{ entry[1] }}"><br>
+        <label>Content:</label><br>
+        <textarea name="content">{{ entry[2] }}</textarea><br>
+        <button type="submit">Update Entry</button>
+    </form>
+    <a href="/">Back to Journal Entries</a>
+</body>
+</html>
